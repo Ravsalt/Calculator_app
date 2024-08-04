@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" disabled>
+        <div class="button-row">
+            <button class="btn button clear" onclick="clearDisplay()">C</button>
+            <button class="btn button number" onclick="appendOperator('/')">/</button>
+            <button class="btn button number" onclick="appendOperator('*')">*</button>
+            <button class="btn button operation" onclick="appendOperator('-')">-</button>
+        </div>
+        <div class="button-row">
+            <button class="btn button number" onclick="appendNumber('7')">7</button>
+            <button class="btn button number" onclick="appendNumber('8')">8</button>
+            <button class="btn button number" onclick="appendNumber('9')">9</button>
+            <button class="btn button operation" onclick="appendOperator('+')">+</button>
+        </div>
+        <div class="button-row">
+            <button class="btn button number" onclick="appendNumber('4')">4</button>
+            <button class="btn button number" onclick="appendNumber('5')">5</button>
+            <button class="btn button number" onclick="appendNumber('6')">6</button>
+            <button class="btn button operation" onclick="calculate()">=</button>
+        </div>
+        <div class="button-row">
+            <button class="btn button number" onclick="appendNumber('1')">1</button>
+            <button class="btn button number" onclick="appendNumber('2')">2</button>
+            <button class="btn button number" onclick="appendNumber('3')">3</button>
+        </div>
+        <div class="button-row">
+            <button class="btn button number zero" onclick="appendNumber('0')">0</button>
+            <button class="btn button number" onclick="appendOperator('.')">.</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
